@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/meus-treinos.css">
+
+    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
+
+    <title>Meus Treinos - GymPlanner</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar-container" class="sidebar-container"></div>
+
+        <div class="main-content">
+            <!-- <div class="info">
+                <h1 class="page-title">Meus treinos</h1>
+                <p class="page-subtitle">Selecione o dia da semana para visualizar os treinos.</p>
+            </div> -->
+
+            <div class="heading">
+                <h2 class="page-title">Meus treinos</h2>
+                <p class="page-subtitle">Selecione o dia da semana para visualizar os treinos.</p>
+            </div>
+
+            <div class="days-list">
+                <!-- <div class="day-card">
+                    <span class="day-name">Segunda</span>
+                    <div class="day-indicator">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('../../components/sidebar/sidebar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = '../../components/sidebar/javascript/sidebar.js';
+                document.body.appendChild(script);
+            })
+            .catch(err => console.error('Erro ao carregar sidebar:', err));
+    </script>
+</body>
+
+</html>

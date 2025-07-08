@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
+
     <title>Exercícios - GymPlanner</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <button class="back-button">
-                <img src="/placeholder.svg?height=24&width=24" alt="Voltar" class="back-icon">
-            </button>
-            
-            <h1 class="page-title">Exercícios</h1>
-            
-            <button class="add-button">Adicionar</button>
-        </div>
+    <div id="sidebar-container" class="sidebar-container"></div>
 
+    <div class="container">
         <!-- Main content -->
         <div class="main-content">
+            <!-- Header -->
+            <div class="header">           
+                <h1 class="page-title">Exercícios</h1>
+                <button class="add-button">Adicionar</button>
+            </div>
+
             <!-- Exercises list -->
             <div class="exercises-list">
                 <div class="exercise-card">
@@ -81,5 +82,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        fetch('../../components/sidebar/sidebar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = '../../components/sidebar/javascript/sidebar.js';
+                document.body.appendChild(script);
+            })
+            .catch(err => console.error('Erro ao carregar sidebar:', err));
+    </script>
 </body>
 </html>

@@ -21,11 +21,15 @@ body {
 
 /* Header */
 .header {
-  padding: 2rem;
+  padding-block: 2rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+
+  max-width: 900px;
+
+  margin: 0 auto;
 }
 
 .back-button {
@@ -51,9 +55,6 @@ body {
 }
 
 .page-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 2rem;
   font-weight: 600;
   color: #1f2937;
