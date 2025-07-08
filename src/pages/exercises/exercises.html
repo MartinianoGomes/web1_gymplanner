@@ -1,99 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../../styles/exercise-system.css" />
 
-    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
+    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css" />
 
     <title>Exercícios - GymPlanner</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="sidebar-container" class="sidebar-container"></div>
 
     <div class="container">
-        <!-- Main content -->
-        <div class="main-content">
-            <!-- Header -->
-            <div class="header">           
+      <!-- Main content -->
+      <div class="main-content">
+        <!-- Header -->
+        <div class="header">           
                 <h1 class="page-title">Exercícios</h1>
-                <button class="add-button">Adicionar</button>
+                <button class="add-button" id="addExercisesBtn">Adicionar ao Treino</button>
             </div>
 
-            <!-- Exercises list -->
-            <div class="exercises-list">
-                <div class="exercise-card">
-                    <div class="exercise-content">
-                        <h3 class="exercise-name">Tríceps francês</h3>
-                        <p class="exercise-description">Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd</p>
-                        <div class="exercise-tags">
-                            <span class="tag tag-group">Grupo fechado</span>
-                            <span class="tag tag-muscle">Tríceps</span>
-                        </div>
-                    </div>
-                    <div class="exercise-indicator filled">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
+        <!-- Exercises list -->
+        <div class="exercises-list">
+          <div class="exercise-card">
+            <div class="exercise-content">
+              <h3 class="exercise-name">Tríceps francês</h3>
+              <p class="exercise-description">
+                Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd
+              </p>
+              <div class="exercise-tags">
+                <span class="tag tag-group">Grupo fechado</span>
+                <span class="tag tag-muscle">Tríceps</span>
+              </div>
+            </div>
+            <div class="exercise-indicator filled">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 6L9 17L4 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
 
-                <div class="exercise-card">
-                    <div class="exercise-content">
-                        <h3 class="exercise-name">Tríceps francês</h3>
-                        <p class="exercise-description">Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd</p>
-                        <div class="exercise-tags">
-                            <span class="tag tag-group">Grupo fechado</span>
-                            <span class="tag tag-muscle">Tríceps</span>
-                        </div>
-                    </div>
-                    <div class="exercise-indicator empty"></div>
-                </div>
+          <div class="exercise-card">
+            <div class="exercise-content">
+              <h3 class="exercise-name">Tríceps francês</h3>
+              <p class="exercise-description">
+                Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd
+              </p>
+              <div class="exercise-tags">
+                <span class="tag tag-group">Grupo fechado</span>
+                <span class="tag tag-muscle">Tríceps</span>
+              </div>
+            </div>
+            <div class="exercise-indicator empty"></div>
+          </div>
 
-                <div class="exercise-card">
-                    <div class="exercise-content">
-                        <h3 class="exercise-name">Tríceps francês</h3>
-                        <p class="exercise-description">Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd</p>
-                        <div class="exercise-tags">
-                            <span class="tag tag-group">Grupo fechado</span>
-                            <span class="tag tag-muscle">Tríceps</span>
-                        </div>
-                    </div>
-                    <div class="exercise-indicator filled">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
+          <div class="exercise-card">
+            <div class="exercise-content">
+              <h3 class="exercise-name">Tríceps francês</h3>
+              <p class="exercise-description">
+                Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd
+              </p>
+              <div class="exercise-tags">
+                <span class="tag tag-group">Grupo fechado</span>
+                <span class="tag tag-muscle">Tríceps</span>
+              </div>
+            </div>
+            <div class="exercise-indicator filled">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 6L9 17L4 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
 
-                <div class="exercise-card">
-                    <div class="exercise-content">
-                        <h3 class="exercise-name">Tríceps francês</h3>
-                        <p class="exercise-description">Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd</p>
-                        <div class="exercise-tags">
-                            <span class="tag tag-group">Grupo fechado</span>
-                            <span class="tag tag-muscle">Tríceps</span>
-                        </div>
-                    </div>
-                    <div class="exercise-indicator empty"></div>
+          <div class="exercise-card">
+            <div class="exercise-content">
+              <h3 class="exercise-name">Tríceps francês</h3>
+              <p class="exercise-description">
+                Lorem ipsum ashd iwic catns Lorem impsum ashd Lorem impsum ashd
+              </p>
+              <div class="exercise-tags">
+                <span class="tag tag-group">Grupo fechado</span>
+                <span class="tag tag-muscle">Tríceps</span>
+              </div>
+            </div>
+            <div class="exercise-indicator empty"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup de Seleção de Dias -->
+    <div id="daySelectionModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Selecionar Dias da Semana</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Escolha os dias para adicionar os exercícios selecionados:</p>
+                <div class="days-grid">
+                    <label class="day-option">
+                        <input type="checkbox" value="segunda" id="segunda">
+                        <span class="day-label">Segunda-feira</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="terca" id="terca">
+                        <span class="day-label">Terça-feira</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="quarta" id="quarta">
+                        <span class="day-label">Quarta-feira</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="quinta" id="quinta">
+                        <span class="day-label">Quinta-feira</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="sexta" id="sexta">
+                        <span class="day-label">Sexta-feira</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="sabado" id="sabado">
+                        <span class="day-label">Sábado</span>
+                    </label>
+                    <label class="day-option">
+                        <input type="checkbox" value="domingo" id="domingo">
+                        <span class="day-label">Domingo</span>
+                    </label>
                 </div>
+                <div class="selected-exercises-preview">
+                    <h3>Exercícios Selecionados:</h3>
+                    <div id="selectedExercisesList"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelModal">Cancelar</button>
+                <button class="btn-primary" id="confirmAddExercises">Adicionar Exercícios</button>
             </div>
         </div>
     </div>
 
-    <script>
-        fetch('../../components/sidebar/sidebar.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('sidebar-container').innerHTML = data;
+    <script src="javascript/script.js"></script>
 
-                const script = document.createElement('script');
-                script.src = '../../components/sidebar/javascript/sidebar.js';
-                document.body.appendChild(script);
-            })
-            .catch(err => console.error('Erro ao carregar sidebar:', err));
+    <script>
+      fetch("../../components/sidebar/sidebar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("sidebar-container").innerHTML = data;
+
+          const script = document.createElement("script");
+          script.src = "../../components/sidebar/javascript/sidebar.js";
+          document.body.appendChild(script);
+        })
+        .catch((err) => console.error("Erro ao carregar sidebar:", err));
     </script>
-</body>
+  </body>
 </html>

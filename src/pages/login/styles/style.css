@@ -21,7 +21,6 @@ body {
   width: 100%;
 }
 
-/* card: formulario */
 .form-section {
   flex: 1;
   max-width: 600px;
@@ -36,7 +35,6 @@ body {
   font-size: 28px;
   margin-bottom: 40px;
 }
-
 
 .logo {
   margin-bottom: 2rem;
@@ -70,18 +68,43 @@ form label {
   display: block;
 }
 
-form input {
+.form-input input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 0.5rem;
+  color: #1f2937;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.form-input input {
+  margin-bottom: 1.5rem;
+}
+
+.form-input label {
+  display: block;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-input input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input input:focus {
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 2px #f97316;
 }
 
 form button {
   width: 100%;
-  background-color: #ffa500;
+  background-color: #f97316;
   color: #fff;
   padding: 12px;
   border: none;
@@ -92,10 +115,9 @@ form button {
 }
 
 form button:hover {
-  background-color: #e69500;
+  background-color: #ea580c;
 }
 
-/* texto: faça login */
 .signup {
   font-size: 13px;
   color: #555;
@@ -108,7 +130,6 @@ form button:hover {
   text-decoration: none;
 }
 
-/* texto: direitos */
 footer {
   font-size: 12px;
   color: #999;
@@ -123,7 +144,6 @@ footer {
   background-color: #ffa500;
 }
 
-/* Responsivo */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;

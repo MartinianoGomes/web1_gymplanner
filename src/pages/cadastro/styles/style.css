@@ -17,7 +17,6 @@ body {
   width: 100vw;
 }
 
-/* Left side - Image section */
 .image-section {
   display: flex;
   flex: 6;
@@ -32,7 +31,6 @@ body {
   object-fit: cover;
 }
 
-/* Right side - Form section */
 .form-section {
   flex: 4;
   background: white;
@@ -48,7 +46,6 @@ body {
   width: 100%;
 }
 
-/* Logo */
 .logo {
   margin-bottom: 2rem;
   text-align: center;
@@ -72,7 +69,6 @@ body {
   color: #1f2937;
 }
 
-/* Heading */
 .heading {
   margin-bottom: 2rem;
 }
@@ -90,7 +86,6 @@ body {
   line-height: 1.5;
 }
 
-/* Form */
 .form {
   margin-bottom: 1.5rem;
 }
@@ -151,7 +146,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Success and Error Messages */
 .success-message,
 .error-message {
   text-align: center;
@@ -173,7 +167,6 @@ body {
   border: 1px solid #fecaca;
 }
 
-/* Login link */
 .login-link {
   text-align: center;
   margin-top: 1.5rem;
@@ -196,7 +189,6 @@ body {
   color: #ea580c;
 }
 
-/* Copyright */
 .copyright {
   text-align: center;
   margin-top: 2rem;
@@ -207,7 +199,6 @@ body {
   font-size: 0.75rem;
 }
 
-/* Toast Message */
 .toast-message {
   position: fixed;
   top: 2rem;
@@ -234,7 +225,6 @@ body {
   }
 }
 
-/* Responsividade para o toast em mobile */
 @media (max-width: 768px) {
   .toast-message {
     top: 1rem;
@@ -244,7 +234,6 @@ body {
   }
 }
 
-/* Tablet Responsiveness (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .form-section {
     padding: 2.5rem;
@@ -257,7 +246,6 @@ body {
   }
 }
 
-/* Mobile Landscape and Small Tablet (481px - 768px) */
 @media (max-width: 768px) {
   body {
     overflow: auto;
@@ -348,7 +336,6 @@ body {
   }
 }
 
-/* Mobile Portrait (320px - 480px) */
 @media (max-width: 480px) {
   .form-section {
     padding: 2rem 1rem 1.5rem 1rem;
@@ -373,7 +360,6 @@ body {
   }
 }
 
-/* Extra Small Mobile (max-width: 320px) */
 @media (max-width: 320px) {
   .form-section {
     padding: 1rem 0.75rem;
@@ -390,7 +376,6 @@ body {
   }
 }
 
-/* Landscape orientation adjustments for mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .container {
     flex-direction: row;

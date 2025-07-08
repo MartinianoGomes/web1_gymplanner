@@ -1,130 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../../styles/exercise-system.css" />
 
-    <link rel="stylesheet" href="styles/style.css">
-
-    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
+    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css" />
 
     <title>GymPlanner - Criar Treino</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="sidebar-container" class="sidebar-container"></div>
 
     <div class="container">
-        <div class="main-content">
-            <div class="heading">
-                <h2>Criar treino</h2>
-                <p>Escolha um grupo muscular</p>
-            </div>
-
-            <div class="muscle-groups-grid" id="muscleGroupsGrid">
-                <div class="muscle-card" data-group="peito">
-                    <div class="muscle-image">
-                        <img src="assets/images/Peito.svg" alt="Peito">
-                    </div>
-                    <div class="muscle-label">Peito</div>
-                </div>
-
-                <div class="muscle-card" data-group="gluteo">
-                    <div class="muscle-image">
-                        <img src="assets/images/Gluteo.svg" alt="Glúteo">
-                    </div>
-                    <div class="muscle-label">Glúteo</div>
-                </div>
-
-                <div class="muscle-card" data-group="trapezio">
-                    <div class="muscle-image">
-                        <img src="assets/images/Quadriceps.svg" alt="Trapézio">
-                    </div>
-                    <div class="muscle-label">Trapézio</div>
-                </div>
-
-                <div class="muscle-card" data-group="biceps">
-                    <div class="muscle-image">
-                        <img src="assets/images/Biceps.svg" alt="Bíceps">
-                    </div>
-                    <div class="muscle-label">Bíceps</div>
-                </div>
-
-                <div class="muscle-card" data-group="panturrilha">
-                    <div class="muscle-image">
-                        <img src="assets/images/Panturrilha.svg" alt="Panturrilha">
-                    </div>
-                    <div class="muscle-label">Panturrilha</div>
-                </div>
-
-                <div class="muscle-card" data-group="abdomen">
-                    <div class="muscle-image">
-                        <img src="assets/images/Abdómen.svg" alt="Abdômen">
-                    </div>
-                    <div class="muscle-label">Abdômen</div>
-                </div>
-
-                <div class="muscle-card" data-group="quadriceps">
-                    <div class="muscle-image">
-                        <img src="assets/images/Quadriceps.svg" alt="Quadríceps">
-                    </div>
-                    <div class="muscle-label">Quadríceps</div>
-                </div>
-
-                <div class="muscle-card" data-group="triceps">
-                    <div class="muscle-image">
-                        <img src="assets/images/Triceps.svg" alt="Tríceps">
-                    </div>
-                    <div class="muscle-label">Tríceps</div>
-                </div>
-
-                <div class="muscle-card" data-group="costas">
-                    <div class="muscle-image">
-                        <img src="assets/images/Costas.svg" alt="Costas">
-                    </div>
-                    <div class="muscle-label">Costas</div>
-                </div>
-
-                <div class="muscle-card" data-group="posterior">
-                    <div class="muscle-image">
-                        <img src="assets/images/Posterior de coxa.svg" alt="Posterior de coxa">
-                    </div>
-                    <div class="muscle-label">Posterior de coxa</div>
-                </div>
-
-                <div class="muscle-card" data-group="ombro">
-                    <div class="muscle-image">
-                        <img src="assets/images/treino-ombro-dr-guilherme-noffs-ortopedista-ombro-sao-paulo.jpg"
-                            alt="Ombro">
-                    </div>
-                    <div class="muscle-label">Ombro</div>
-                </div>
-
-                <div class="muscle-card" data-group="antebraco">
-                    <div class="muscle-image">
-                        <img src="assets/images/istock-171571479_7nwz4J0.webp" alt="Antebraço">
-                    </div>
-                    <div class="muscle-label">Antebraço</div>
-                </div>
-            </div>
+      <div class="main-content">
+        <div class="heading">
+          <h2>Criar treino</h2>
+          <p>Escolha um grupo muscular</p>
         </div>
+
+        <div class="muscle-groups-grid" id="muscleGroupsGrid">
+          <div class="muscle-card" data-group="peito">
+            <div class="muscle-image">
+              <img src="assets/images/Peito.svg" alt="Peito" />
+            </div>
+            <div class="muscle-label">Peito</div>
+          </div>
+
+          <div class="muscle-card" data-group="gluteo">
+            <div class="muscle-image">
+              <img src="assets/images/Gluteo.svg" alt="Glúteo" />
+            </div>
+            <div class="muscle-label">Glúteo</div>
+          </div>
+
+          <div class="muscle-card" data-group="trapezio">
+            <div class="muscle-image">
+              <img src="assets/images/Quadriceps.svg" alt="Trapézio" />
+            </div>
+            <div class="muscle-label">Trapézio</div>
+          </div>
+
+          <div class="muscle-card" data-group="biceps">
+            <div class="muscle-image">
+              <img src="assets/images/Biceps.svg" alt="Bíceps" />
+            </div>
+            <div class="muscle-label">Bíceps</div>
+          </div>
+
+          <div class="muscle-card" data-group="panturrilha">
+            <div class="muscle-image">
+              <img src="assets/images/Panturrilha.svg" alt="Panturrilha" />
+            </div>
+            <div class="muscle-label">Panturrilha</div>
+          </div>
+
+          <div class="muscle-card" data-group="abdomen">
+            <div class="muscle-image">
+              <img src="assets/images/Abdómen.svg" alt="Abdômen" />
+            </div>
+            <div class="muscle-label">Abdômen</div>
+          </div>
+
+          <div class="muscle-card" data-group="quadriceps">
+            <div class="muscle-image">
+              <img src="assets/images/Quadriceps.svg" alt="Quadríceps" />
+            </div>
+            <div class="muscle-label">Quadríceps</div>
+          </div>
+
+          <div class="muscle-card" data-group="triceps">
+            <div class="muscle-image">
+              <img src="assets/images/Triceps.svg" alt="Tríceps" />
+            </div>
+            <div class="muscle-label">Tríceps</div>
+          </div>
+
+          <div class="muscle-card" data-group="costas">
+            <div class="muscle-image">
+              <img src="assets/images/Costas.svg" alt="Costas" />
+            </div>
+            <div class="muscle-label">Costas</div>
+          </div>
+
+          <div class="muscle-card" data-group="posterior">
+            <div class="muscle-image">
+              <img
+                src="assets/images/Posterior de coxa.svg"
+                alt="Posterior de coxa"
+              />
+            </div>
+            <div class="muscle-label">Posterior de coxa</div>
+          </div>
+
+          <div class="muscle-card" data-group="ombro">
+            <div class="muscle-image">
+              <img
+                src="assets/images/treino-ombro-dr-guilherme-noffs-ortopedista-ombro-sao-paulo.jpg"
+                alt="Ombro"
+              />
+            </div>
+            <div class="muscle-label">Ombro</div>
+          </div>
+
+          <div class="muscle-card" data-group="antebraco">
+            <div class="muscle-image">
+              <img
+                src="assets/images/istock-171571479_7nwz4J0.webp"
+                alt="Antebraço"
+              />
+            </div>
+            <div class="muscle-label">Antebraço</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="javascript/script.js"></script>
 
     <script>
-        fetch('../../components/sidebar/sidebar.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('sidebar-container').innerHTML = data;
+      fetch("../../components/sidebar/sidebar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("sidebar-container").innerHTML = data;
 
-                const script = document.createElement('script');
-                script.src = '../../components/sidebar/javascript/sidebar.js';
-                document.body.appendChild(script);
-            })
-            .catch(err => console.error('Erro ao carregar sidebar:', err));
+          const script = document.createElement("script");
+          script.src = "../../components/sidebar/javascript/sidebar.js";
+          document.body.appendChild(script);
+        })
+        .catch((err) => console.error("Erro ao carregar sidebar:", err));
     </script>
-</body>
-
+  </body>
 </html>

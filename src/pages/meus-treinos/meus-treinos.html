@@ -1,44 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/meus-treinos.css">
-
-    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
-
     <title>Meus Treinos - GymPlanner</title>
+    
+    <link rel="stylesheet" href="styles/meus-treinos.css">
+    <link rel="stylesheet" href="../../styles/exercise-system.css">
+    <link rel="stylesheet" href="../../components/sidebar/style/sidebar.css">
 </head>
-
 <body>
+    <div id="sidebar-container" class="sidebar-container"></div>
+
     <div class="container">
-        <div id="sidebar-container" class="sidebar-container"></div>
-
         <div class="main-content">
-            <!-- <div class="info">
-                <h1 class="page-title">Meus treinos</h1>
-                <p class="page-subtitle">Selecione o dia da semana para visualizar os treinos.</p>
-            </div> -->
-
-            <div class="heading">
-                <h2 class="page-title">Meus treinos</h2>
-                <p class="page-subtitle">Selecione o dia da semana para visualizar os treinos.</p>
+            <div class="weekly-schedule">
+                <h2>Cronograma Semanal</h2>
+                <div class="days-grid">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total de Exercícios</h3>
+                    <span class="stat-number" id="totalExercises">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Dias com Treino</h3>
+                    <span class="stat-number" id="activeDays">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Grupos Musculares</h3>
+                    <span class="stat-number" id="muscleGroups">0</span>
+                </div>
             </div>
-
             <div class="days-list">
-                <!-- <div class="day-card">
-                    <span class="day-name">Segunda</span>
-                    <div class="day-indicator">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="day-card" data-day="segunda">
+                    <div class="day-header">
+                        <h3>Segunda-feira</h3>
+                        <span class="exercise-count" id="count-segunda">0 exercícios</span>
                     </div>
-                </div> -->
+                    <div class="day-preview" id="preview-segunda">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="segunda">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="terca">
+                    <div class="day-header">
+                        <h3>Terça-feira</h3>
+                        <span class="exercise-count" id="count-terca">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-terca">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="terca">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="quarta">
+                    <div class="day-header">
+                        <h3>Quarta-feira</h3>
+                        <span class="exercise-count" id="count-quarta">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-quarta">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="quarta">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="quinta">
+                    <div class="day-header">
+                        <h3>Quinta-feira</h3>
+                        <span class="exercise-count" id="count-quinta">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-quinta">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="quinta">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="sexta">
+                    <div class="day-header">
+                        <h3>Sexta-feira</h3>
+                        <span class="exercise-count" id="count-sexta">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-sexta">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="sexta">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="sabado">
+                    <div class="day-header">
+                        <h3>Sábado</h3>
+                        <span class="exercise-count" id="count-sabado">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-sabado">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="sabado">Ver Treino</button>
+                </div>
+
+                <div class="day-card" data-day="domingo">
+                    <div class="day-header">
+                        <h3>Domingo</h3>
+                        <span class="exercise-count" id="count-domingo">0 exercícios</span>
+                    </div>
+                    <div class="day-preview" id="preview-domingo">
+                        <p class="no-exercises">Nenhum exercício cadastrado</p>
+                    </div>
+                    <button class="view-day-btn" data-day="domingo">Ver Treino</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="javascript/meus-treinos.js"></script>
 
     <script>
         fetch('../../components/sidebar/sidebar.html')

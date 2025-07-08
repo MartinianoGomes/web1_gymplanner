@@ -11,11 +11,24 @@ body {
   color: #333;
 }
 
+.weekly-schedule {
+  padding-bottom: 60px;
+}
+
+.weekly-schedule h2 {
+  padding-bottom: 12px;
+}
+
+
+.stats-container {
+  padding-bottom: 20px;
+}
+
 .container {
-  width: 100%;
+  display: flex;
+  width: 100dvw;
   min-height: 100vh;
   background-color: white;
-  display: flex;
   flex-direction: column;
   position: relative;
 }
@@ -56,14 +69,6 @@ body {
   align-items: center;
   padding-top: 5em;
 }
-
-/* .page-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 3rem;
-  text-align: center;
-} */
 
 .heading {
   margin-bottom: 3rem;
@@ -154,6 +159,7 @@ body {
 
   .main-content {
     padding: 0 1rem;
+    width: 100%;
   }
 
   .page-title {
@@ -162,7 +168,7 @@ body {
   }
 
   .days-list {
-    max-width: 100%;
+    width: 1200px;
   }
 
   .day-card {
