@@ -56,12 +56,30 @@ body {
   align-items: center;
 }
 
-.page-title {
+/* .page-title {
   font-size: 2.5rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 3rem;
   text-align: center;
+} */
+
+.heading {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.heading p {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .days-list {
