@@ -11,6 +11,11 @@ body {
   overflow: hidden;
 }
 
+.sidebar-container {
+  position: fixed;
+  z-index: 1000;
+}
+
 .container {
   display: flex;
   height: 100vh;

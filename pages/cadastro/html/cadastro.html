@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../../../components/sidebar/sidebar.css">
 
     <title>GymPlanner - Cadastre-se</title>
 </head>
 <body>
+    <div id="sidebar-container" class="sidebar-container"></div>
     <div class="container">
         <!-- Left side - Image section -->
         <div class="image-section">
@@ -67,5 +69,20 @@
     </div>
 
     <script src="javascript/script.js"></script>
+        <script>
+      // Carrega o conteúdo da sidebar
+      fetch('../../../components/sidebar/sidebar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('sidebar-container').innerHTML = data;
+
+          // Carrega o JS depois que o HTML da sidebar for inserido
+          const script = document.createElement('script');
+          script.src = '../../../components/sidebar/sidebar.js';
+          document.body.appendChild(script);
+        })
+        .catch(err => console.error('Erro ao carregar sidebar:', err));
+    </script>
+  </body>
 </body>
 </html>
