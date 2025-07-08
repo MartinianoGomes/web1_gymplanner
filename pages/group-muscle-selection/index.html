@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>GymPlanner - Criar Treino</title>
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" id="backButton">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="main-content">
+            <div class="logo">
+                <span>
+                    <img src="assets/logo/logo.svg" alt="Logo GymPlanner">
+                </span>
+            </div>
+                            
+            <div class="heading">
+                <h2>Criar treino</h2>
+                <p>Escolha um grupo muscular</p>
+            </div>
+                            
+            <div class="muscle-groups-grid" id="muscleGroupsGrid">
+                <div class="muscle-card" data-group="peito">
+                    <div class="muscle-image">
+                        <img src="assets/images/Peito.svg" alt="Peito">
+                    </div>
+                    <div class="muscle-label">Peito</div>
+                </div>
+                
+                <div class="muscle-card" data-group="gluteo">
+                    <div class="muscle-image">
+                        <img src="assets/images/Gluteo.svg" alt="Glúteo">
+                    </div>
+                    <div class="muscle-label">Glúteo</div>
+                </div>
+                
+                <div class="muscle-card" data-group="trapezio">
+                    <div class="muscle-image">
+                        <img src="assets/images/Quadriceps.svg" alt="Trapézio">
+                    </div>
+                    <div class="muscle-label">Trapézio</div>
+                </div>
+                
+                <div class="muscle-card" data-group="biceps">
+                    <div class="muscle-image">
+                        <img src="assets/images/Biceps.svg" alt="Bíceps">
+                    </div>
+                    <div class="muscle-label">Bíceps</div>
+                </div>
+                
+                <div class="muscle-card" data-group="panturrilha">
+                    <div class="muscle-image">
+                        <img src="assets/images/Panturrilha.svg" alt="Panturrilha">
+                    </div>
+                    <div class="muscle-label">Panturrilha</div>
+                </div>
+                
+                <div class="muscle-card" data-group="abdomen">
+                    <div class="muscle-image">
+                        <img src="assets/images/Abdómen.svg" alt="Abdômen">
+                    </div>
+                    <div class="muscle-label">Abdômen</div>
+                </div>
+                
+                <div class="muscle-card" data-group="quadriceps">
+                    <div class="muscle-image">
+                        <img src="assets/images/Quadriceps.svg" alt="Quadríceps">
+                    </div>
+                    <div class="muscle-label">Quadríceps</div>
+                </div>
+                
+                <div class="muscle-card" data-group="triceps">
+                    <div class="muscle-image">
+                        <img src="assets/images/Triceps.svg" alt="Tríceps">
+                    </div>
+                    <div class="muscle-label">Tríceps</div>
+                </div>
+                
+                <div class="muscle-card" data-group="costas">
+                    <div class="muscle-image">
+                        <img src="assets/images/Costas.svg" alt="Costas">
+                    </div>
+                    <div class="muscle-label">Costas</div>
+                </div>
+                
+                <div class="muscle-card" data-group="posterior">
+                    <div class="muscle-image">
+                        <img src="assets/images/Posterior de coxa.svg" alt="Posterior de coxa">
+                    </div>
+                    <div class="muscle-label">Posterior de coxa</div>
+                </div>
+            </div>
+
+            <div id="selectedGroups" class="selected-groups" style="display: none;">
+                <p>Grupos selecionados:</p>
+                <div id="selectedGroupsList" class="selected-list"></div>
+            </div>
+            
+            <button type="button" class="submit-btn" id="createWorkoutBtn">Criar Treino</button>
+                            
+            <div class="copyright">
+                <p>© 2025 Copy. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

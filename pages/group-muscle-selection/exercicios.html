@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/exercicios.css">
+    <title>GymPlanner - Selecionar Exercícios</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="assets/images/mulher-bonita-gosta-de-zumba 1.svg" alt="Pessoa fazendo exercícios">
+        </div>
+                
+        <div class="form-section">
+            <div class="form-container">
+                <div class="logo">
+                    <span>
+                        <img src="assets/logo/logo.svg" alt="Logo GymPlanner">
+                    </span>
+                </div>
+                                
+                <div class="heading">
+                    <h2>Selecionar Exercícios</h2>
+                    <p>Escolha os exercícios para cada grupo muscular selecionado</p>
+                </div>
+
+                <div id="selectedMuscleGroups" class="selected-muscle-groups">
+                </div>
+
+                <div class="exercise-selection">
+                    <div class="exercise-selector">
+                        <label for="muscleGroupSelect">Grupo Muscular:</label>
+                        <select id="muscleGroupSelect" class="form-select">
+                            <option value="">Selecione um grupo muscular</option>
+                        </select>
+                    </div>
+
+                    <div class="exercise-selector">
+                        <label for="exerciseSelect">Exercício:</label>
+                        <select id="exerciseSelect" class="form-select" disabled>
+                            <option value="">Primeiro selecione um grupo muscular</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="add-exercise-btn" id="addExerciseBtn" disabled>
+                        Adicionar Exercício
+                    </button>
+                </div>
+
+                <div class="added-exercises">
+                    <h3>Exercícios do Treino</h3>
+                    <div id="exercisesList" class="exercises-list">
+                        <p class="empty-message">Nenhum exercício adicionado ainda</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" class="secondary-btn" id="backBtn">Voltar</button>
+                    <button type="button" class="submit-btn" id="finishWorkoutBtn" disabled>
+                        Finalizar Treino
+                    </button>
+                </div>
+                                
+                <div class="copyright">
+                    <p>© 2025 Copy. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/exercicios.js"></script>
+</body>
+</html>
