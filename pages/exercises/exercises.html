@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>GymPlanner - Exercícios</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="back-btn" onclick="goBack()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1>Exercícios</h1>
+            <button class="add-btn" onclick="addExercise()">
+                Adicionar
+            </button>
+        </header>
+
+        <!-- Exercises List -->
+        <main class="exercises-container">
+            <div class="exercise-card" data-exercise-id="1">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn active" onclick="toggleExercise(this, 1)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="2">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 2)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="3">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 3)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+
+            <div class="exercise-card" data-exercise-id="4">
+                <div class="exercise-content">
+                    <h3 class="exercise-title">Tríceps francês</h3>
+                    <p class="exercise-description">Lorem ipsum ashd iwic cakns Lorem impsun ashd Lorem impsun ashd</p>
+                    <div class="exercise-tags">
+                        <span class="tag tag-equipment">Banco reclinado</span>
+                        <span class="tag tag-muscle">Tríceps</span>
+                    </div>
+                </div>
+                <div class="exercise-selector">
+                    <button class="selector-btn" onclick="toggleExercise(this, 4)"></button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Toast Message -->
+        <div id="toastMessage" class="toast-message" style="display: none;">
+            <p><span id="toastText"></span></p>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
