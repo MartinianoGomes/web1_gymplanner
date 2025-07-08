@@ -105,7 +105,7 @@ body {
   color: #1f2937;
   font-size: 0.875rem;
   transition: all 0.2s ease;
-  min-height: 44px;
+  min-height: 58px;
 }
 
 .form-group input::placeholder {
@@ -129,7 +129,7 @@ body {
   cursor: pointer;
   transition: background-color 0.2s ease;
   font-size: 0.875rem;
-  min-height: 44px;
+  min-height: 58px;
 }
 
 .submit-btn:hover {

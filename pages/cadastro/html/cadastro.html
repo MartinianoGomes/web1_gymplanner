@@ -12,28 +12,25 @@
 <body>
     <div id="sidebar-container" class="sidebar-container"></div>
     <div class="container">
-        <!-- Left side - Image section -->
+
         <div class="image-section">
             <img src="../assets/images/mulher-bonita-gosta-de-zumba 1.svg" alt="Mulher fazendo exercício flexionando o braço">
         </div>
-                
-        <!-- Right side - Form section -->
+
         <div class="form-section">
             <div class="form-container">
-                <!-- Logo -->
+
                 <div class="logo">
                     <span>
                         <img src="../assets/logo/logo.svg" alt="Logo GymPlanner">
                     </span>
                 </div>
                                 
-                <!-- Heading -->
                 <div class="heading">
                     <h2>Cadastre-se</h2>
                     <p>Realize seu cadastro na nossa plataforma e aproveite todos os benefícios gratuitamente.</p>
                 </div>
                                 
-                <!-- Registration form -->
                 <form class="form" id="signupForm">
                     <div class="form-group">
                         <label for="name">Nome</label>
@@ -54,12 +51,10 @@
                     <button type="submit" class="submit-btn">Cadastrar</button>
                 </form>
                 
-                <!-- Error message -->
                 <div id="errorMessage" class="error-message" style="display: none;">
                     <p><span id="errorText"></span></p>
                 </div>
                                 
-                <!-- Login link -->
                 <div class="login-link">
                     <p>Já possui conta? <a href="../../login/html/login.html">Clique aqui e realize seu login</a></p>
                 </div>
@@ -69,14 +64,12 @@
     </div>
 
     <script src="javascript/script.js"></script>
-        <script>
-      // Carrega o conteúdo da sidebar
+    <script>
       fetch('../../../components/sidebar/sidebar.html')
         .then(res => res.text())
         .then(data => {
           document.getElementById('sidebar-container').innerHTML = data;
 
-          // Carrega o JS depois que o HTML da sidebar for inserido
           const script = document.createElement('script');
           script.src = '../../../components/sidebar/sidebar.js';
           document.body.appendChild(script);
