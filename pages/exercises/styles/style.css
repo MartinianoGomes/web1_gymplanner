@@ -6,103 +6,112 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: white;
   min-height: 100vh;
-  color: #1f2937;
+  color: #333;
 }
 
-/* .container {
-  max-width: 800px;
-  margin: 0 auto;
+.container {
+  width: 100%;
   min-height: 100vh;
-} */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Header */
 .header {
+  padding: 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 6rem 2rem 1.5rem 2rem;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  align-items: center;
+  position: relative;
 }
 
-.back-btn {
-  background: none;
+.back-button {
+  background-color: #3b82f6;
   border: none;
-  color: #6b7280;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 1rem;
 }
 
-.header h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1f2937;
+.back-button:hover {
+  background-color: #2563eb;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.page-title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
 }
 
-.add-btn {
-  background-color: #f97316;
+.add-button {
+  background-color: #fbbf24;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
+  cursor: pointer;
   font-weight: 600;
   font-size: 0.875rem;
-  cursor: pointer;
   transition: all 0.2s ease;
-  position: absolute;
-  right: 2rem;
 }
 
-/* Exercises Container */
-.exercises-container {
-  padding: 1.5rem 2rem;
+.add-button:hover {
+  background-color: #f59e0b;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 0 2rem 2rem 2rem;
+}
+
+/* Exercises list */
+.exercises-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
-/* Exercise Card */
 .exercise-card {
-  background: #f3f4f6;
+  background-color: #e5e7eb;
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  transition: all 0.2s ease;
+  align-items: flex-start;
   cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
 }
 
 .exercise-card:hover {
-  background: #e5e7eb;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #d1d5db;
 }
 
 .exercise-content {
   flex: 1;
+  margin-right: 1rem;
 }
 
-.exercise-title {
+.exercise-name {
   font-size: 1.125rem;
   font-weight: 600;
   color: #1f2937;
@@ -123,16 +132,14 @@ body {
 }
 
 .tag {
-  padding: 0.375rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
   font-weight: 500;
-  border: none;
-  cursor: default;
 }
 
-.tag-equipment {
-  background-color: #f97316;
+.tag-group {
+  background-color: #fbbf24;
   color: white;
 }
 
@@ -141,173 +148,95 @@ body {
   color: white;
 }
 
-/* Exercise Selector */
-.exercise-selector {
-  margin-left: 1rem;
-}
-
-.selector-btn {
-  width: 24px;
-  height: 24px;
-  border: 2px solid #f97316;
+.exercise-indicator {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-}
-
-.selector-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
-}
-
-.selector-btn.active {
-  background-color: #f97316;
-  border: 2px solid #f97316;
-}
-
-.selector-btn.active::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
 }
 
-/* Toast Message */
-.toast-message {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  background-color: #10b981;
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-  animation: slideInRight 0.3s ease-out;
+.exercise-indicator.filled {
+  background-color: #fbbf24;
 }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.exercise-indicator.empty {
+  background-color: transparent;
+  border: 2px solid #fbbf24;
 }
 
-/* Mobile Responsiveness */
+.exercise-card:hover .exercise-indicator.filled {
+  background-color: #f59e0b;
+}
+
+.exercise-card:hover .exercise-indicator.empty {
+  border-color: #f59e0b;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .container {
-    box-shadow: none;
-  }
-
   .header {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
-  .back-btn {
-    left: 1rem;
+  .page-title {
+    font-size: 1.5rem;
   }
 
-  .add-btn {
-    right: 1.5rem;
-    padding: 0.625rem 1rem;
-    font-size: 0.8125rem;
+  .main-content {
+    padding: 0 1rem 1.5rem 1rem;
   }
 
-  .header h1 {
-    font-size: 1.25rem;
-  }
-
-  .exercises-container {
-    padding: 1rem 1.5rem;
+  .exercises-list {
+    max-width: 100%;
   }
 
   .exercise-card {
     padding: 1.25rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
 
-  .exercise-selector {
-    margin-left: 0;
-    align-self: flex-end;
-  }
-
-  .toast-message {
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
-    text-align: center;
+  .exercise-content {
+    margin-right: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
   }
 
-  .back-btn {
-    left: 0.5rem;
+  .page-title {
+    position: static;
+    transform: none;
+    text-align: center;
+    order: -1;
   }
 
-  .add-btn {
-    right: 1rem;
+  .back-button {
+    align-self: flex-start;
   }
 
-  .exercises-container {
-    padding: 1rem;
+  .add-button {
+    align-self: flex-end;
   }
 
   .exercise-card {
-    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .exercise-title {
-    font-size: 1rem;
+  .exercise-content {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 
-  .exercise-description {
-    font-size: 0.8125rem;
+  .exercise-indicator {
+    align-self: flex-end;
   }
-}
-
-/* Animation for card selection */
-.exercise-card.selected {
-  background: #fef3c7;
-  border: 1px solid #f59e0b;
-}
-
-.exercise-card.selected:hover {
-  background: #fde68a;
-}
-
-/* Loading animation */
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.loading {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
