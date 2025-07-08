@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // function logout() {
+  //   // Limpa o usuário atual do localStorage
+  //   localStorage.removeItem("gymplanner_current_user");
+  //   // Redireciona para a página de login ou página inicial
+  //   window.location.href = '../login/login.html';
+  // }
+
   function showMessage(message, type = "error") {
     // Remove mensagem anterior se existir
     const existingMessage = document.querySelector(".message");
