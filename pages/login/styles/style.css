@@ -36,6 +36,17 @@ body {
   margin-bottom: 40px;
 }
 
+
+.logo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 240px;
+  height: auto;
+}
+
 .form-section h1 span {
   color: #ffa500;
   font-weight: bold;
